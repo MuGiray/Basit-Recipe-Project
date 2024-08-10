@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    max-width: 800px; /* Bu değeri 1000px veya 1200px olarak arttırabilirsiniz */
+    max-width: 800px; /* Genişliği ihtiyacınıza göre arttırabilirsiniz */
     margin: 20px auto;
     padding: 20px;
     background-color: hsl(0, 0%, 100%); /* White */
@@ -18,7 +18,7 @@ body {
 }
 
 .recipe-header {
-    text-align: center;
+    text-align: left;
 }
 
 .recipe-image {
@@ -29,63 +29,52 @@ body {
 
 .recipe-title {
     font-family: 'Young Serif', serif;
-    font-size: 2.5em; /* Orijinal tasarımda daha büyükse bu değeri arttırabilirsiniz */
+    font-size: 2.5em; /* Boyutu ihtiyacınıza göre arttırabilirsiniz */
     margin: 20px 0 10px;
-    color: hsl(14, 45%, 36%); /* Brown 800 */
+    color: hsl(24, 5%, 18%); /* Brown 800 */
 }
 
 .recipe-description {
-    text-align: left; /* Sola dayalı yapalım */
+    text-align: left; /* Sola dayalı yapıldı */
     font-size: 1.125em;
     color: hsl(30, 10%, 34%); /* Stone 600 */
     margin-bottom: 30px;
-    max-width: 80%; /* Metin genişliğini sınırlamak için */
+    max-width: 100%; /* Metin genişliği sınırlaması */
 }
 
 h2 {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
     color: hsl(14, 45%, 36%); /* Brown 800 */
-    font-size: 1.5em;
-    margin-top: 30px;
+    font-size: 1.75em;
+    margin-top: 0px;
     margin-bottom: 15px;
 }
 
-ul, ol {
-    margin-left: 20px;
-}
-
-li {
-    margin-bottom: 10px;
-    color: hsl(30, 10%, 34%); /* Stone 600 */
-}
-
-strong {
-    color: hsl(14, 45%, 36%); /* Brown 800 */
+.preparation-time h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: hsl(332, 51%, 32%); /* Brown 800 */
+    font-size: 1.75em;
+    margin-top: 0px;
+    margin-bottom: 15px;
 }
 
 .preparation-time ul {
     background-color: hsl(330, 100%, 98%); /* Rose 50 */
     padding: 15px;
     border-radius: 8px;
-    max-width: 70%; /* Listeleri daha dar ve merkezde yapalım */
+    max-width: 100%; /* Listeleri daha dar ve merkezde yapalım */
+    list-style-position: inside; /* Madde işaretlerini kutu içinde tutar */
+    margin-left: 0; /* Gereksiz margin'i kaldırır */
 }
 
 .ingredients, .instructions, .nutrition {
-    max-width: 80%; /* Bu bölümleri daha dar yaparak merkezde toplayalım */
-}
-
-h2 {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    color: hsl(14, 45%, 36%); /* Brown 800 */
-    font-size: 1.75em; /* Başlık boyutunu arttırdık */
-    margin-top: 30px;
-    margin-bottom: 15px;
+    max-width: 100%; /* Bu bölümleri daha dar yaparak merkezde toplayalım */
 }
 
 ol, ul {
-    margin-left: 20px;
+    margin-left: -20px;
 }
 
 li {
@@ -94,12 +83,82 @@ li {
     line-height: 1.5;
 }
 
-.nutrition ul {
-    margin-top: 15px;
+ol {
+    counter-reset: item; /* Sayacın sıfırlanması */
+    list-style-type: none; /* Varsayılan sayıların kaldırılması */
+    padding-left: 0; /* Gerekirse soldan boşlukları kaldırın */
+    margin-left: 0; /* Gerekirse soldan boşlukları kaldırın */
 }
 
-.nutrition li {
+ol li {
+    counter-increment: item; /* Sayacın arttırılması */
+    margin-bottom: 10px; /* Her bir madde arasına boşluk ekleyin */
+    color: hsl(30, 10%, 34%); /* Metnin rengi */
+}
+
+ol li::before {
+    content: counter(item) ". "; /* Sayı ve ardından nokta */
+    font-weight: bold; /* Kalın yazı */
+    color: hsl(14, 45%, 36%); /* Sayıların rengi */
+    font-size: 1em; /* Sayının font boyutunu buradan ayarlayın */
+    margin-right: 5px; /* Sayı ve metin arasında boşluk */
+}
+
+
+strong {
+    color: hsl(24, 5%, 18%); /* Brown 800 */
+}
+
+.nutrition {
+    margin-top: 30px;
+}
+
+.nutrition h2 {
+    font-size: 1.75em;
+    margin-bottom: 10px;
+}
+
+.nutrition p {
+    font-size: 1.125em;
+    margin-bottom: 20px;
+    color: hsl(30, 10%, 34%); /* Stone 600 */
+}
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse; /* Hücreler arası boşluğu kaldırır */
+}
+
+.nutrition table tr {
+    border-bottom: 1px solid hsl(30, 18%, 87%); /* Stone 150 */
+}
+
+.nutrition table td {
+    padding: 10px 0;
+    font-size: 1.125em;
+    color: hsl(30, 10%, 34%); /* Stone 600 */
+}
+
+.nutrition table td:first-child {
+    width: 50%; /* İlk sütunun genişliği */
+}
+
+.nutrition table td:last-child {
+    text-align: right; /* İkinci sütunu sağa hizalar */
     font-weight: 600;
+    color: hsl(14, 45%, 36%); /* Brown 800 */
+}
+
+.attribution {
+    text-align: center; /* İkinci sütunu sağa hizalar */
+    color: hsl(24, 5%, 18%); /* Stone 900 */
+}
+
+.section-divider {
+    border: 0; /* Varsayılan border'ı kaldırıyoruz */
+    height: 1px; /* Çizgi yüksekliği */
+    background-color: hsl(30, 18%, 87%); /* Stone 150 rengi */
+    margin: 30px 0; /* Çizgi çevresinde boşluk */
 }
 
 /* Responsive Tasarım */
