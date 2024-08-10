@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 800px; /* Bu değeri 1000px veya 1200px olarak arttırabilirsiniz */
     margin: 20px auto;
     padding: 20px;
     background-color: hsl(0, 0%, 100%); /* White */
@@ -29,16 +29,17 @@ body {
 
 .recipe-title {
     font-family: 'Young Serif', serif;
-    font-size: 2em;
+    font-size: 2.5em; /* Orijinal tasarımda daha büyükse bu değeri arttırabilirsiniz */
     margin: 20px 0 10px;
     color: hsl(14, 45%, 36%); /* Brown 800 */
 }
 
 .recipe-description {
-    text-align: left; /* Metni sola dayamak için */
+    text-align: left; /* Sola dayalı yapalım */
     font-size: 1.125em;
     color: hsl(30, 10%, 34%); /* Stone 600 */
     margin-bottom: 30px;
+    max-width: 80%; /* Metin genişliğini sınırlamak için */
 }
 
 h2 {
@@ -67,6 +68,30 @@ strong {
     background-color: hsl(330, 100%, 98%); /* Rose 50 */
     padding: 15px;
     border-radius: 8px;
+    max-width: 70%; /* Listeleri daha dar ve merkezde yapalım */
+}
+
+.ingredients, .instructions, .nutrition {
+    max-width: 80%; /* Bu bölümleri daha dar yaparak merkezde toplayalım */
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: hsl(14, 45%, 36%); /* Brown 800 */
+    font-size: 1.75em; /* Başlık boyutunu arttırdık */
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+ol, ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: hsl(30, 10%, 34%); /* Stone 600 */
+    line-height: 1.5;
 }
 
 .nutrition ul {
@@ -89,9 +114,10 @@ strong {
 
     .recipe-description {
         font-size: 1em;
+        max-width: 100%; /* Mobilde tam genişlikte olsun */
     }
 
-    h2 {
-        font-size: 1.25em;
+    .preparation-time ul, .ingredients, .instructions, .nutrition {
+        max-width: 100%; /* Mobilde tam genişlikte olsun */
     }
 }
