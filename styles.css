@@ -35,10 +35,10 @@ body {
 }
 
 .recipe-description {
-    font-size: 4.125em;
+    text-align: left; /* Metni sola dayamak için */
+    font-size: 1.125em;
     color: hsl(30, 10%, 34%); /* Stone 600 */
     margin-bottom: 30px;
-    text-align: left;
 }
 
 h2 {
