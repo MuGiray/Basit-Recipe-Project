@@ -1,0 +1,96 @@
+/* Genel Stil Ayarları */
+body {
+    font-family: 'Outfit', sans-serif;
+    color: hsl(24, 5%, 18%); /* Stone 900 */
+    margin: 0;
+    padding: 0;
+    background-color: hsl(30, 54%, 90%); /* Stone 100 */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%); /* White */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-header {
+    text-align: center;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.recipe-title {
+    font-family: 'Young Serif', serif;
+    font-size: 2em;
+    margin: 20px 0 10px;
+    color: hsl(14, 45%, 36%); /* Brown 800 */
+}
+
+.recipe-description {
+    font-size: 1.125em;
+    color: hsl(30, 10%, 34%); /* Stone 600 */
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    color: hsl(14, 45%, 36%); /* Brown 800 */
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    color: hsl(30, 10%, 34%); /* Stone 600 */
+}
+
+strong {
+    color: hsl(14, 45%, 36%); /* Brown 800 */
+}
+
+.preparation-time ul {
+    background-color: hsl(330, 100%, 98%); /* Rose 50 */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.nutrition ul {
+    margin-top: 15px;
+}
+
+.nutrition li {
+    font-weight: 600;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .recipe-title {
+        font-size: 1.75em;
+    }
+
+    .recipe-description {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+}
