@@ -79,29 +79,29 @@ ol, ul {
 
 li {
     margin-bottom: 10px;
-    color: hsl(30, 10%, 34%); /* Stone 600 */
+    color: hsl(30, 10%, 34%);
     line-height: 1.5;
 }
 
 ol {
-    counter-reset: item; /* Sayacın sıfırlanması */
-    list-style-type: none; /* Varsayılan sayıların kaldırılması */
-    padding-left: 0; /* Gerekirse soldan boşlukları kaldırın */
-    margin-left: 0; /* Gerekirse soldan boşlukları kaldırın */
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 ol li {
-    counter-increment: item; /* Sayacın arttırılması */
-    margin-bottom: 10px; /* Her bir madde arasına boşluk ekleyin */
-    color: hsl(30, 10%, 34%); /* Metnin rengi */
+    counter-increment: item;
+    margin-bottom: 10px;
+    color: hsl(30, 10%, 34%);
 }
 
 ol li::before {
-    content: counter(item) ". "; /* Sayı ve ardından nokta */
-    font-weight: bold; /* Kalın yazı */
-    color: hsl(14, 45%, 36%); /* Sayıların rengi */
-    font-size: 1em; /* Sayının font boyutunu buradan ayarlayın */
-    margin-right: 5px; /* Sayı ve metin arasında boşluk */
+    content: counter(item) ". ";
+    font-weight: bold;
+    color: hsl(14, 45%, 36%);
+    font-size: 1em;
+    margin-right: 5px;
 }
 
 
